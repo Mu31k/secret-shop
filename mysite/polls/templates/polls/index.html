@@ -1,0 +1,37 @@
+{% extends 'polls/layot.html' %}
+
+{% block titl %}Главная СТР{% endblock %}
+
+{% block content %}
+
+   <nav class="nav">
+       <section class="section">
+<!--           <h2>Section</h2>-->
+                <a class="item_news_1" href="{% url 'news-detail' id1 %}">
+                    <h3> {{ title1 }} </h3>
+                    <p>{{ price1 }}$</p>
+                    <p>{{ date1 }}</p>
+                </a>
+                <a class="item_news_2" href="{% url 'news-detail' id2 %}">
+                    <h3> {{ title2 }} </h3>
+                    <p>{{ price2 }}$</p>
+                    <p>{{ date2 }}</p>
+                </a>
+                <a class="item_news_3" href="{% url 'news-detail' id3 %}">
+                    <h3> {{ title3 }} </h3>
+                    <p>{{ price3 }}$</p>
+                    <p>{{ date3 }}</p>
+                </a>
+
+       </section>
+       <article class="article">Article
+
+       </article>
+   </nav>
+    <div class="features">
+
+
+
+<!--      {{ qw }}-->
+    </div>
+{% endblock %}

@@ -1,0 +1,67 @@
+{% load static %}
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block titl %}{% endblock %}</title>
+    <link rel="shortcut icon" href="{% static 'polls/img/main.ico' %}" type="image/x-icon"/>
+    <link rel="stylesheet" href="{% static 'polls/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'polls/python/pytp.py' %}">
+    <link rel="stylesheet" href="http://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+    <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>-->
+    <header class="header">
+            <div class="container">
+                <ul>
+                    <a href="{% url 'home' %}"> Главная</a>
+                    <a href="news"> Новости</a>
+<!--                 без {% добовляет сылку по верх предыдущей-->
+                    <a href="{% url 'sign' %}"> qwer</a>
+                    <a href="admin"> Admin</a>
+
+    <!--                    <a href=""><li> Про нас</li></a>-->
+    <!--                    <a href=""><li> Контакты</li></a>-->
+    <!--        &lt;!&ndash;   sh 1280px v 118px v 82   <a href=""><li><button class="btn btn-info"><i class="fas fa-plus-circle"></i> Добавить <br>запись</button></li></a>&ndash;&gt;-->
+                </ul>
+            </div>
+        </header>
+
+<!--    <div class="core">-->
+<!--        <div class="row1">-->
+<!--&lt;!&ndash;            <img src="{% static 'polls/img/main.ico' %}" alt="Лого">&ndash;&gt;-->
+<!--            <H3>Aditii</H3>-->
+<!--        </div>-->
+
+
+
+<!--    </div>-->
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer class="footer">Footer</footer>
+
+</body>
+</html>
+
+
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>{% block title %}{% endblock %}</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--    {% block cont %}-->
+<!--    {% endblock %}-->
+<!--</body>-->
+<!--</html>-->
